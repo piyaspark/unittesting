@@ -63,7 +63,7 @@ public class Statistics {
         if (x == y) {
             covx = variance(x);
         }
-        else if (x == null || y == null) return 0;
+        else if (x == null || y == null) throw  new IllegalArgumentException();
         else if (x.length != y.length) throw new IllegalArgumentException();
         else {
             for (int k = 0; k < x.length; k++) {

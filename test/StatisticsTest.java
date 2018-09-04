@@ -79,6 +79,16 @@ public class StatisticsTest {
             thrown = true;
         }
         assertTrue(thrown);
+        x = null ;
+        y= null;
+        thrown = false;
+        try {
+            Statistics.covariance(x, y);
+        } catch (IllegalArgumentException e) {
+            thrown = true;
+        }
+        assertTrue(thrown);
+
     }
 
     @Test
