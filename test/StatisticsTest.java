@@ -9,6 +9,9 @@ public class StatisticsTest {
      */
     static final double TOL = 1.0E-6;
 
+    /**
+     * test normal average value.
+     */
     @Test
     public void testAverageTinyArray() {
         double[] x = {123.01};
@@ -17,6 +20,9 @@ public class StatisticsTest {
         assertEquals(123.015, Statistics.average(y), TOL);
     }
 
+    /**
+     * test
+     */
     @Test
     public void testAverageMixedValues() {
         double[] x = new double[99];
@@ -33,6 +39,9 @@ public class StatisticsTest {
         assertEquals(avg, Statistics.average(x), TOL);
     }
 
+    /**
+     * test
+     */
     @Test
     public void testVarianceNull() {
         double[] x = new double[99];
