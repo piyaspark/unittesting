@@ -68,9 +68,8 @@ public class StatisticsTest {
 
     }
 
-
     @Test
-    public void testThrowsException() {
+    public void testCovarianceThrowsException() {
         double[] x = {123.02, 140.52, 350.90, 543.86};
         double[] y = {58.56, 19.41, 19.02};
         boolean thrown = false;
@@ -80,7 +79,16 @@ public class StatisticsTest {
             thrown = true;
         }
         assertTrue(thrown);
-
     }
 
+    @Test
+    public void testCovarianceEquals () {
+        double[] x = new double[100];
+        double[] y = new double[100];
+        for (int i = 0 ; i < y.length ; i ++ ) {
+            y[i] = i+1 ;
+            x[i] = i+1 ;
+        }
+    assertEquals(833.25000 , Statistics.covariance(x,y) , TOL);
+    }
 }
